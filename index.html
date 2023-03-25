@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeBucks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Promo</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>This is no ordinary coffee <br>It's<span>BeeBucks</span></h2>
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dolorum sequi eligendi doloremque ut officiis dicta voluptates inventore cum corrupti est obcaecati, deserunt sed illo ullam iusto placeat possimus ratione.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                    <img src="img1.png" class="BeeBucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#6B421E')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://id-id.facebook.com/"><img src="facebook.png"></a></li>
+            <li><a href="https://twitter.com/?lang=id"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/?hl=id"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.BeeBucks').src = anything;
+    }
+
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+
+    function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle')
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    }
+</script>
+</body>
+</html>
